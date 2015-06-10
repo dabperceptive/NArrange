@@ -1,8 +1,0 @@
-language: c
- 
-install:
-  - sudo apt-get install mono-devel mono-gmcs nunit-console
- 
-script:
-  - xbuild ./Source/build.sln
-  - nunit-console ./Source/NArrange.Tests.Core\bin/Debug/NArrange.Tests.Core.dll -exclude Integration,NotWorkingOnMono
