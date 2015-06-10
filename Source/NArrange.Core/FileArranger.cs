@@ -395,6 +395,11 @@ namespace NArrange.Core
 
 			if (outputFileText != null)
 			{
+				if (_arrangeResults.ContainsKey(outputFile))
+				{
+					LogMessage(LogLevel.Warning, "duplicated output file:" + outputFile);
+					throw new Exception("Duplicated output file: " + outputFile);
+				}
 				//
 				// Store the arranged elements so that we can create a backup before writing
 				//
@@ -545,7 +550,7 @@ namespace NArrange.Core
 			List<string> filesToModify = new List<string>();
 			_filesParsed = _arrangeResults.Count;
 			LogMessage(LogLevel.Verbose, "{0} files parsed.", _filesParsed);
-
+			
 			Dictionary<string, ArrangeResult>.Enumerator enumerator = _arrangeResults.GetEnumerator();
 			while (enumerator.MoveNext())
 			{
