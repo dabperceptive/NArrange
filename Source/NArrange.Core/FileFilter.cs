@@ -86,7 +86,14 @@ namespace NArrange.Core
 
             if (file != null)
             {
-                isMatch = ConditionExpressionEvaluator.Instance.Evaluate(_conditionExpression, file);
+				if (!(file.Name.EndsWith(".g.cs") || file.Name.EndsWith(".g.i.cs")))
+				{
+					isMatch = ConditionExpressionEvaluator.Instance.Evaluate(_conditionExpression, file);
+				}
+				else
+				{
+					//System.Console.Write("ignore .g.cs");
+				}
             }
 
             return isMatch;
