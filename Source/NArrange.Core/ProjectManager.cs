@@ -260,7 +260,7 @@ namespace NArrange.Core
             {
                 if (IsRecognizedSourceFile(file.FullName))
                 {
-                    sourceFiles.Add(file.FullName);
+					if (!sourceFiles.Contains(file.FullName)) sourceFiles.Add(file.FullName);
                 }
             }
 
