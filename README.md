@@ -1,11 +1,11 @@
 This is a fork to the NArrange tool (http://narrange.net/) 
 
 # Continuous Integration
-The CI is managed by AppVeyor (AppVeyor.com)
+The CI is managed by [AppVeyor](https://ci.appveyor.com/project/dabperceptive/narrange/history)
 
-Global Project Status: [![Build status](https://ci.appveyor.com/api/projects/status/6nreolmb83onpkul?svg=true)](https://ci.appveyor.com/project/dabperceptive/narrange)
+Last - Commit Status: [![Build status](https://ci.appveyor.com/api/projects/status/6nreolmb83onpkul?svg=true)](https://ci.appveyor.com/project/dabperceptive/narrange)
 
-Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/6nreolmb83onpkul/branch/master?svg=true)](https://ci.appveyor.com/project/dabperceptive/narrange/branch/master)
+Master - Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/6nreolmb83onpkul/branch/master?svg=true)](https://ci.appveyor.com/project/dabperceptive/narrange/branch/master)
 
 
 # Build Environment:
@@ -17,6 +17,7 @@ Build Status: [![Build status](https://ci.appveyor.com/api/projects/status/6nreo
 - Wix Toolset 3.8 or higher
 
 # Folders
+This Section describes the Folder structure in the Repository
 ## Source
 Contains all Source code 
 
