@@ -43,6 +43,7 @@ namespace NArrange.ConsoleApplication
 	using System.Text;
 
 	using NArrange.Core;
+	using System.IO;
 
 	/// <summary>
 	/// NArrange console application
@@ -255,8 +256,22 @@ namespace NArrange.ConsoleApplication
 				//
 				// Arrange the source code file
 				//
-				FileArranger fileArranger = new FileArranger(commandArgs.Configuration, logger);
-				success = fileArranger.Arrange(commandArgs.Input, commandArgs.Output, commandArgs.Backup);
+				string configPath = commandArgs.Configuration;
+				if (string.IsNullOrEmpty(configPath))
+				{
+					configPath = Path.GetDirectoryName(Environment.GetCommandLineArgs()[0]) + "\\DefaultConfig.xml";
+				}
+				if (!Path.IsPathRooted(configPath)) configPath = Path.GetFullPath(configPath);
+				if (!File.Exists(configPath)) configPath = null;
+				logger.LogMessage(LogLevel.Info, string.Format("configPath: {0}", configPath));
+
+				string sourcePath = commandArgs.Input;
+				if (string.IsNullOrEmpty(sourcePath)) sourcePath = "./";
+				if (!Path.IsPathRooted(sourcePath)) sourcePath = Path.GetFullPath(sourcePath);
+				logger.LogMessage(LogLevel.Info, sourcePath);
+
+				FileArranger fileArranger = new FileArranger(configPath, logger);
+				success = fileArranger.Arrange(sourcePath, commandArgs.Output, commandArgs.Backup);
 
 				if (!success)
 				{
