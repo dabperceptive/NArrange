@@ -133,84 +133,84 @@ namespace NArrange.Tests.VisualBasic
 
                 attributeElement = elements[3] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+                Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyTitle", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"NArrange.Core.Tests\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(3, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[4] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyDescription", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(0, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[5] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyConfiguration", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(0, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[6] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyCompany", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(0, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[7] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyProduct", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"NArrange.Core.Tests\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(0, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[8] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyCopyright", attributeElement.Name, "Unexpected attribute name.");
-                Assert.AreEqual("\"Copyright \u003f 2007\"", attributeElement.BodyText, "Unexpected attribute text.");
+				Assert.AreEqual("\"Copyright © 2007\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(0, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[9] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyTrademark", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(0, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[10] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyCulture", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(0, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[11] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("ComVisible", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("False", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(3, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[12] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("Guid", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"def01aba-79c5-4082-9522-e570c52a2df1\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(1, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[13] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyVersion", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"1.0.0.0\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(9, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
 
                 attributeElement = elements[14] as AttributeElement;
                 Assert.IsNotNull(attributeElement, "Element is not an AttributeElement.");
-                Assert.AreEqual("assembly", attributeElement.Target, "Unexpected attribute target.");
+				Assert.AreEqual("Assembly", attributeElement.Target, "Unexpected attribute target.");
                 Assert.AreEqual("AssemblyFileVersion", attributeElement.Name, "Unexpected attribute name.");
                 Assert.AreEqual("\"1.0.0.0\"", attributeElement.BodyText, "Unexpected attribute text.");
                 Assert.AreEqual(0, attributeElement.HeaderComments.Count, "An unexpected number of header comment lines were parsed.");
