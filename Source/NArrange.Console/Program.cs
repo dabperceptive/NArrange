@@ -260,9 +260,9 @@ namespace NArrange.ConsoleApplication
 				if (string.IsNullOrEmpty(configPath))
 				{
 					configPath = Path.GetDirectoryName(Environment.GetCommandLineArgs()[0]) + "\\DefaultConfig.xml";
+					if (!File.Exists(configPath)) configPath = null;
 				}
-				if (!Path.IsPathRooted(configPath)) configPath = Path.GetFullPath(configPath);
-				if (!File.Exists(configPath)) configPath = null;
+				if (!string.IsNullOrEmpty(configPath) && !Path.IsPathRooted(configPath)) configPath = Path.GetFullPath(configPath);
 				logger.LogMessage(LogLevel.Info, string.Format("configPath: {0}", configPath));
 
 				string sourcePath = commandArgs.Input;

@@ -11,9 +11,7 @@
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(WixToolPath)\wix.targets</WixTargetsPath>
     <WixTasksPath Condition=" '$(WixTasksPath)' == '' ">$(WixToolPath)\WixTasks.dll</WixTasksPath>
     <SupressIces>ICE45</SupressIces>
-    <ProductVersion Condition=" '$(ProductVersion)' == '' ">0.2.9.1</ProductVersion>
-    <DefineConstants>ProductVersion=$(ProductVersion)</DefineConstants>
-    <WixVariables>WixUILicenseRtf=..\license.rtf;WixUIDialogBmp=dialog.bmp;WixUIBannerBmp=banner.bmp;ProductVersion=$(ProductVersion)</WixVariables>
+    <WixVariables>WixUILicenseRtf=..\license.rtf;ProductVersion=$(ProductVersion)</WixVariables>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -60,4 +58,14 @@
       <Name>NArrange.VisualBasic</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Definitions.wxi" />
+  </ItemGroup>
+  <Target Name="AfterBuild">
+    <GetAssemblyIdentity AssemblyFiles="..\NArrange.Core\bin\x86\$(Configuration)\NArrange.Core.dll">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
+    </GetAssemblyIdentity>
+    <Copy SourceFiles=".\bin\$(Configuration)\$(OutputName).msi" DestinationFiles=".\bin\$(Configuration)\$(OutputName)-V%(AssemblyVersion.Version).msi" />
+    <Delete Files=".\bin\$(Configuration)\$(OutputName).msi" />
+  </Target>
 </Project>
